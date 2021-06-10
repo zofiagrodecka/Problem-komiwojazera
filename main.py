@@ -2,4 +2,5 @@ from GeneticsManager import GeneticsManager
 from Graph import Graph
 
 g = GeneticsManager()
-g.iterate()
+for i in range(50):
+    g.iterate()
