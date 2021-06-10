@@ -6,6 +6,7 @@ class GUI(tk.Frame):
         self.root = root
         self.manager = manager
         self.grid(row = 0, column = 0, padx = 20, pady = 20)
+        self.info = "długość drogi: "
         self.iterate_button = tk.Button(self, text = "iterate", command = self.iterate)
         self.entry = tk.Entry(self)
         self.display_label = tk.Label(self)
