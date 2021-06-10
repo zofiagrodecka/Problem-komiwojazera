@@ -7,6 +7,3 @@ g = GeneticsManager()
 root = tk.Tk()
 gui = GUI(root, g)
 root.mainloop()
-
-for i in range(50):
-    g.iterate()

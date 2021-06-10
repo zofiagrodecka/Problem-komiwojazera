@@ -81,5 +81,12 @@ class GeneticsManager:
         for i in range(self.n_selected_animals):
             self.population.pop()
         print(self.population)
+        self.get_length()
+        self.show()
 
-       # self.graph.show_graph()
+    def show(self):
+        self.graph.show_graph(self.population[0][0])
+
+    def get_length(self):
+        print(self.population[0][1])
+        return self.population[0][1]
