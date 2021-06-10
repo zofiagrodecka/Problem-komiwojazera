@@ -29,7 +29,7 @@ class GeneticsManager:
             copy = deepcopy(nodes)
             element = [copy, self.length(copy)]
             self.population.append(element)
-            print(self.population[i])
+            # print(self.population[i])
         # self.graph.show_graph()
 
     def length(self, path):
@@ -75,18 +75,21 @@ class GeneticsManager:
             self.population[n3] = [path, self.length(path)]
 
         self.population.sort(key=sorting_key)
-        print(self.population)
+        # print(self.population)
 
         # selekcja - usuwanie najgorszych rozwiazan
         for i in range(self.n_selected_animals):
             self.population.pop()
-        print(self.population)
+        # print(self.population)
         self.get_length()
-        self.show()
+        # self.show()
 
-    def show(self):
-        self.graph.show_graph(self.population[0][0])
+    # def show(self):
+    #     self.graph.show_graph(self.population[0][0])
+
+    def get_graph_path(self):
+        return self.graph.get_graph_image(self.population[0][0])
 
     def get_length(self):
-        print(self.population[0][1])
+        # print(self.population[0][1])
         return self.population[0][1]
